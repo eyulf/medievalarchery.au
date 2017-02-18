@@ -11,6 +11,15 @@ url: "https://preview.medievalarchery.org.au"
 # Build settings
 markdown: kramdown
 
+gems:
+  - jekyll-minifier
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+    sass_dir: _sass
+
 gallerytag:
     source_dir: images/gallery
     destination_dir: images/thumbs
@@ -44,6 +53,3 @@ image:
     default:
       width: 800
       height: AUTO
-
-gems:
-    - jekyll-minifier
