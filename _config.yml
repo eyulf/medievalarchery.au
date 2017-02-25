@@ -6,10 +6,19 @@ description: >
 keywords: >
     mas,medieval,archer,archery,society,re-enactment,reenactment,sydney,new,south,wales,australia,nsw
 baseurl: "" 
-url: "https://medievalarchery.org.au" 
+url: "https://preview.medievalarchery.org.au" 
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-minifier
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+    sass_dir: _sass
 
 gallerytag:
     source_dir: images/gallery
@@ -44,6 +53,3 @@ image:
     default:
       width: 800
       height: AUTO
-
-gems:
-    - jekyll-minifier

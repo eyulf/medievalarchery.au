@@ -6,25 +6,40 @@ permalink: /links/
 ---
 ### Social Media
 
- * [Facebook](https://www.facebook.com/groups/675317789211161)
+ * [Facebook][facebook]
 
 ### Other Groups
 
- * [Company of the Staple](http://companyofthestaple.org.au/)
- * [Ancient Arts Fellowship](http://www.aaf.org.au/)
- * [Europa Reenactment Association](http://europa-reenactment.org/)
- * [Swordplay Theatrical School of Fencing](http://www.swordplay.net.au/)
- * [Historical Equestrian Games Australia](http://historicalequestriangames.com.au/)
+ * [Company of the Staple][staple]
+ * [Ancient Arts Fellowship][aaf]
+ * [Europa Reenactment Association][europa]
+ * [Swordplay Theatrical School of Fencing][swordplay]
+ * [Historical Equestrian Games Australia][horses]
 
 ### Merchants we like
 
- * [Esford](http://www.esford.com/)
- * [The Longbow Shop](https://www.thelongbowshop.com/)
- * [The Medieval Shoppe](http://www.medievalshoppe.com.au/)
- * [Medieval Fightclub](https://www.medieval-fightclub.com/)
+ * [Esford][esford]
+ * [The Longbow Shop][longbowshop]
+ * [The Medieval Shoppe][medievalshoppe]
+ * [Medieval Fightclub][fightclub]
 
 ### Other Important Sites
 
- * [Re-enactors Park](https://www.facebook.com/ReenactorsPark)
- * [Australian Living History Federation](http://www.alhf.org.au/)
- * [The Campbelltown Steam & Machinery Museum](http://www.csmm.com.au)
+ * [Australian Living History Federation][alhf]
+ * [The Campbelltown Steam & Machinery Museum][museum]
+
+[facebook]:       https://www.facebook.com/groups/675317789211161
+
+[staple]:         http://companyofthestaple.org.au/
+[aaf]:            http://www.aaf.org.au/
+[europa]:         http://europa-reenactment.org/
+[swordplay]:      http://www.swordplay.net.au/
+[horses]:         http://historicalequestriangames.com.au/
+
+[esford]:         http://www.esford.com/
+[longbowshop]:    https://www.thelongbowshop.com/
+[medievalshoppe]: http://www.medievalshoppe.com.au/
+[fightclub]:      https://www.medieval-fightclub.com/
+
+[alhf]:           http://www.alhf.org.au/
+[museum]:         http://www.csmm.com.au

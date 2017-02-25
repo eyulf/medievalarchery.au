@@ -1,5 +1,5 @@
 ---
-layout: gallary
+layout: sidebox
 nav: Gallery
 title: Gallery
 permalink: /gallery/
