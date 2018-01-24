@@ -1,0 +1,34 @@
+---
+layout: gallary-footer
+nav: Gallery
+title: Gallery
+permalink: /gallery/
+---
+
+<div id="sidebox">
+    {% image side motto.jpg alt="Our motto is Deferimus Corvis, which means We bring the Ravens" %}
+    <p>Our motto is <em>Deferimus Corvis</em>, which means "We bring the Ravens"</p>
+</div>
+    
+<div id="contentbox">
+<style TYPE="text/css">
+.gallery-wrapper {
+  width: 35em;
+  text-align: center;
+  padding: 1em 0 4em 0;
+}
+.gallery-best-image{
+  max-height: 20em;
+  max-width: 20em;
+}
+</style>
+{% for gallery in page.galleries %}
+<div class="gallery-wrapper">
+    <a href="{{ gallery['gallery'] }}">
+        <img class="gallery-best-image" src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}">
+    </a>
+    <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
+    {{ gallery["images"] | size }} image{% if gallery["images"].size != 1 %}s{% endif %}
+</div>
+{% endfor %}
+</div>
