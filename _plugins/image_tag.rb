@@ -75,13 +75,6 @@ module Jekyll
       if preset && preset['attr']
         html_attr = preset['attr'].merge(html_attr)
       end
-      
-      # check for 'title' attribute
-      if html_attr['title'] == "_alt"
-        html_attr['title'] = html_attr['alt']
-      end
-      
-      img_title = html_attr['title']
 
       html_attr_string = html_attr.inject('') { |string, attrs|
         if attrs[1]
@@ -100,14 +93,9 @@ module Jekyll
         return
       end
 
+      generated_src = File.join(site.baseurl, generated_src) unless site.baseurl.empty?
       # Return the markup!
-      gen_markup = "<img src=\"#{generated_src}\" #{html_attr_string} />"
-      
-      if img_title  # use special markup if we have a title attribute
-        gen_markup = "<div class=\"imgbox\"><div>#{gen_markup} #{img_title}</div></div>"
-      end
-      
-      return gen_markup
+      "<img src=\"#{generated_src}\" #{html_attr_string}>"
     end
 
     def generate_image(instance, site_source, site_dest, image_source, image_dest)
@@ -119,6 +107,7 @@ module Jekyll
       end
 
       image = MiniMagick::Image.open(image_source_path)
+      image.coalesce
       digest = Digest::MD5.hexdigest(image.to_blob).slice!(0..5)
 
       image_dir = File.dirname(instance[:src])
@@ -172,6 +161,7 @@ module Jekyll
           i.resize "#{gen_width}x#{gen_height}^"
           i.gravity "center"
           i.crop "#{gen_width}x#{gen_height}+0+0"
+          i.layers "Optimize"
         end
 
         image.write gen_dest_file
