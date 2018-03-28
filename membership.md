@@ -25,5 +25,5 @@ Any member dressing as a female is expected to attain garb and kit to approximat
 
 You may find that you do not just stop at getting your garb and equipment right. Many members have bought medieval tents, furniture, coins and games. There are lots of little things that go towards making your experience as fun as possible, and members often find themselves drawn towards research of certain things within a period.
 
-[alhf]:   http://www.alhf.org.au/
+[alhf]:   https://alhf.org.au/
 [museum]: http://www.csmm.com.au
