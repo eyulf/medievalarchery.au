@@ -7,7 +7,6 @@ permalink: /events/
 
     <article id="main">
         <header class="special container">
-            <span class="icon fa-envelope"></span>
             <h2>Events MAS Are Attending</h2>
             <p>You will be able to find MAS at the following public events.</p>
         </header>
@@ -15,7 +14,7 @@ permalink: /events/
         <section class="wrapper style4 special container small">
             <div class="content">
             {% assign sorted_events = (site.data.events | sort) %}
-            {% for event in sorted_events%}
+            {% for event in sorted_events %}
                 {% assign mod = forloop.index | modulo: 2 %}
                 {% if mod !=0 %}
                 <div class="row">

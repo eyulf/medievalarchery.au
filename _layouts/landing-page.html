@@ -3,6 +3,23 @@
 
   {% include head.html %}
 
+<script>
+$(document).ready(function() {
+    var header = $("#header");
+    header.addClass("no-background");
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 100%) {
+            header.removeClass("no-background");
+        } else {
+            header.addClass("no-background");
+        }
+    });
+});
+</script>
+
   <body class="index">
 
     {% include header.html %}
