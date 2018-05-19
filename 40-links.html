@@ -1,0 +1,27 @@
+---
+layout: infobar
+id: links
+title: Links
+permalink: /links/
+---
+
+    <article id="main">
+        <header class="special container">
+            <span class="icon fa-envelope"></span>
+            <h2>Links</h2>
+            <p>Descriptive fluff about links</p>
+        </header>
+
+        <section class="wrapper style4 special container small">
+            <div class="content">
+                {% for category in site.data.links %}
+                <h3>{{ category[1]['name'] }}</h3>
+                <ul>
+                {% for link in category[1]['links'] %}
+                    <li><a href="{{ link[1].url }}">{{ link[1].name }}</a></li>
+                {% endfor %}
+                </ul>
+                {% endfor %}
+            </div>
+        </section>
+    </article>

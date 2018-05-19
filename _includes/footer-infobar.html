@@ -1,0 +1,69 @@
+<!-- Footer -->
+
+<section class="wrapper style1 container special">
+    <div class="row">
+        {% if page.id != 'events' %}
+        {% if page.id == 'join' or page.id == 'gallery' %}
+        <div class="6u">
+        {% else %}
+        <div class="4u">
+        {% endif %}
+            <section>
+                <header>
+                    <h3>Events</h3>
+                </header>
+                <p>Where to find MAS next</p>
+                <footer>
+                    <ul class="buttons">
+                        <li><a href="#" class="button small">Find Events</a></li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+        {% endif %}
+
+        {% if page.id != 'join' %}
+        {% if page.id == 'events' or page.id == 'gallery' %}
+        <div class="6u">
+        {% else %}
+        <div class="4u">
+        {% endif %}
+            <section>
+                <header>
+                    <h3>Join</h3>
+                </header>
+                <p>All the information you need to join MAS</p>
+                <footer>
+                    <ul class="buttons">
+                        <li><a href="#" class="button small">Join Us</a></li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+        {% endif %}
+
+        {% if page.id != 'gallery' %}
+        {% if page.id == 'join' or page.id == 'events' %}
+        <div class="6u">
+        {% else %}
+        <div class="4u">
+        {% endif %}
+            <section>
+                <header>
+                    <h3>Gallery</h3>
+                </header>
+                <p>View the gallery to see MAS in action</p>
+                <footer>
+                    <ul class="buttons">
+                        <li><a href="#" class="button small">View Gallery</a></li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+        {% endif %}
+        </div>
+</section>
+</article>
+</div>
+
+  {% include footer.html %}

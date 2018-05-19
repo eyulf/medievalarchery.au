@@ -1,39 +1,24 @@
 ---
-layout: gallery-footer
+layout: infobar
+id: gallery-page
 ---
-<div id="sidebox">
-    {% image side motto.jpg alt="Our motto is Deferimus Corvis, which means We bring the Ravens" %}
-    <p>Our motto is <em>Deferimus Corvis</em>, which means "We bring the Ravens"</p>
-</div>
-    
-<div id="contentbox">
+    <article id="main">
+        <header class="special container">
+            <span class="icon fa-envelope"></span>
+            <h2><a href="/{{ site.gallery.dir }}">{{ page.title }}</h2>
+            <p>{{ page.info.desc }}</p>
+        </header>
 
-<style TYPE="text/css">
-.gallery-image-wrapper {
-  height: 300px;
-  width: 300px;
-  display: inline-block;
-  margin: 1em;
-  position: relative;
-}
-.gallery-image {
-  margin: auto;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  max-height: 100%;
-  max-width: 100%;
-}
-</style>
-<h1><a href="/{{ site.gallery.dir }}">{{ page.title }}</a></h1>
-<hr />
-{% for image in page.images %}
-    <div class="gallery-image-wrapper">
-        <a name="{{ image.name }}"></a>
-        <a href="{{ image.name }}"{% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]"{% endif %}>
-            <img class="gallery-image" src="thumbs/{{ image.name }}" />
-        </a>
-    </div>
-{% endfor %}
-
-</div>
+        <section class="wrapper style4 special container">
+            <div class="content">
+            {% for image in page.images %}
+                <div class="gallery-image-wrapper">
+                    <a name="{{ image.name }}"></a>
+                    <a href="{{ image.name }}"{% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]"{% endif %}>
+                        <img class="gallery-image" src="thumbs/{{ image.name }}" />
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+        </section>
+    </article>

@@ -1,0 +1,54 @@
+social:
+  name: Social Media
+  links:
+    facebook:
+      name: Facebook
+      url: https://www.facebook.com/groups/675317789211161
+    instagram:
+      name: Instagram
+      url: https://www.instagram.com/medievalarcherysociety/
+
+groups:
+  name: Other Groups
+  links:
+    8cots:
+      name: Company of the Staple
+      url: http://companyofthestaple.org.au/
+    aaf:
+      name: Ancient Arts Fellowship
+      url: http://www.aaf.org.au/
+    europa:
+      name: Europa Reenactment Association
+      url: http://europa-reenactment.org/
+    swordplay:
+      name: Swordplay Theatrical School of Fencing
+      url: http://www.swordplay.net.au/
+    hega:
+      name: Historical Equestrian Games Australia
+      url: http://historicalequestriangames.com.au/
+
+vendors:
+  name: Merchants we like
+  links:
+    esford:
+      name: Esford
+      url: http://www.esford.com/
+    longbowshop:
+      name: The Longbow Shop
+      url: https://www.thelongbowshop.com/
+    medievalshoppe:
+      name: The Medieval Shoppe
+      url: http://www.medievalshoppe.com.au/
+    mfc:
+      name: Medieval Fightclub
+      url: https://www.medieval-fightclub.com/
+
+other:
+  name: Other Important Sites
+  links:
+    alhf:
+      name: Australian Living History Federation
+      url: http://www.alhf.org.au/
+    museum:
+      name: The Campbelltown Steam & Machinery Museum
+      url: http://www.csmm.com.au

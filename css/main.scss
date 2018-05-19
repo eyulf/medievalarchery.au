@@ -58,7 +58,7 @@ body {
     {
         color: $title-color;
     }
-    
+
     & h1 .subheading
     {
         color: #2b1e17;
@@ -66,7 +66,7 @@ body {
         font-style: italic;
         margin-top: 10px;
     }
-    
+
     & a:hover
     {
         text-decoration: none;
@@ -106,7 +106,7 @@ body {
     padding: 2%;
     padding-top: 4%;
     padding-bottom: 0px;
-    
+
     font-weight: bold;
     text-align: center;
 
@@ -138,7 +138,7 @@ body {
         font-family: $title-font-family;
         font-size: 1.60em;
         font-style: italic;
-        
+
         color: $title-color;
 
         margin: 0px;
@@ -166,7 +166,7 @@ body {
 {
     text-align: center;
     font-size: 0.75em;
-    
+
     & img
     {
         vertical-align: middle;
@@ -183,7 +183,7 @@ body {
 
 .gallery-caption
 {
-    
+
 }
 
 #form
@@ -198,17 +198,17 @@ body {
 #form .form-object
 {
     padding: 3%;
-    
+
     & input
     {
         width: 100%;
     }
-    
+
     & input:last-of-type
     {
         width: 100%;
     }
-    
+
     & textarea
     {
         width: 100%;
@@ -241,7 +241,7 @@ body {
         background-color: $background-color;
         background-image: url($parchment-image);
     }
-    
+
     #parchment
     {
         width:100%;
@@ -261,12 +261,12 @@ body {
             font-size: 4em;
             font-variant:small-caps;
         }
-        
+
         & h1 .mobile
         {
             display: none;
         }
-        
+
         & h1 .subheading
         {
             display: none;
@@ -309,23 +309,23 @@ body {
     }
 
     #footer
-    {  
+    {
         float: left;
     }
-    
+
     .gallery
     {
         width: 100%;
         padding-left: 0px;
     }
-    
+
     .gallery-list li
     {
         float: left;
         padding: 2%;
 
     }
-    
+
     #form
     {
         text-align: center;
@@ -344,13 +344,13 @@ body {
         background-image: url($parchment-image);
         background-repeat: repeat;
         background-color: $background-color;
-        
+
         min-width: $min-width;
         max-width: $max-width;
-                                    
+
         border-style: dotted;
         border-color: $background-color;
-        border-width: 1px;                                            
+        border-width: 1px;
     }
 
     #header
@@ -377,7 +377,7 @@ body {
     {
         border-left: 1px $title-color solid;
         border-right: 1px $title-color solid;
-        
+
         &:first-of-type
         {
             border-left: 0px $title-color solid;
@@ -391,8 +391,8 @@ body {
 
     #footer
     {
-        clear: both;        
-        top: 0px;                                       
+        clear: both;
+        top: 0px;
     }
 }
 
@@ -424,4 +424,32 @@ a
 ul
 {
     list-style-type: none;
+}
+
+//
+
+.gallery-image-wrapper {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 1em;
+  position: relative;
+}
+.gallery-image {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.gallery-wrapper {
+  width: 35em;
+  text-align: center;
+  padding: 1em 0 4em 0;
+}
+.gallery-best-image{
+  max-height: 20em;
+  max-width: 20em;
 }

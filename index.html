@@ -1,14 +1,154 @@
 ---
-layout: sidebox
+layout: landing-page
+id: home
+permalink: /
 ---
+    <!-- Main -->
+        <article id="main">
+            <header class="special container">
+                <!--<span class="icon fa-bar-chart-o"></span>-->
+                <h2><strong>Medieval Archery Society</strong> (MAS)</h2>
 
-<p>
-    The Medieval Archery Society (MAS) is a group of like minded people who primarily portray an English mercenary company (Free Company) in France, circa 1365, based in Sydney, Australia. 
-</p>
-<p>
-    The main focus of the group is archery, but we have members who have skills in medieval cooking, leatherwork, spinning, black smithing, fletching and foot combat. The group is also interested in archery from other periods of history, and other cultures. The group attends medieval festivals, often running archery for the public.
-</p>
+                <p>The <strong>Medieval Archery Society</strong> (MAS) is a group of like minded people who primarily portray an English mercenary company (Free Company) in France, circa 1365, based in Sydney, Australia. The main focus of the group is archery, but we have members who have skills in medieval cooking, leatherwork, spinning, black smithing, fletching and foot combat. The group is also interested in archery from other periods of history, and other cultures. The group attends medieval festivals, often running archery for the public.</p>
+                <p>
+                    <ul class="buttons">
+                        <li><a href="/about/" class="button">Learn more About Us</a></li>
+                    </ul>
+                </p>
+            </header>
 
-<div id="image">
-    <p>{% image 800w archers.jpg alt="The Medieval Archery Society" %}</p>
-</div>
+                <!-- One ->
+                    <section class="wrapper style2 container special-alt">
+                        <div class="row half">
+                            <div class="8u">
+
+                                <header>
+                                    <h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
+                                </header>
+                                <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
+                                <footer>
+                                    <ul class="buttons">
+                                        <li><a href="#" class="button">Find Out More</a></li>
+                                    </ul>
+                                </footer>
+
+                            </div>
+                            <div class="4u skel-cell-important">
+
+                                <ul class="featured-icons">
+                                    <li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
+                                    <li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
+                                    <li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
+                                    <li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
+                                    <li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+                                    <li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </section>
+
+                <!-- Two ->
+                    <section class="wrapper style1 container special">
+                        <div class="row">
+                            <div class="4u">
+
+                                <section>
+                                    <span class="icon featured fa-check"></span>
+                                    <header>
+                                        <h3>This is Something</h3>
+                                    </header>
+                                    <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+                                </section>
+
+                            </div>
+                            <div class="4u">
+
+                                <section>
+                                    <span class="icon featured fa-check"></span>
+                                    <header>
+                                        <h3>Also Something</h3>
+                                    </header>
+                                    <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+                                </section>
+
+                            </div>
+                            <div class="4u">
+
+                                <section>
+                                    <span class="icon featured fa-check"></span>
+                                    <header>
+                                        <h3>Probably Something</h3>
+                                    </header>
+                                    <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+                                </section>
+
+                            </div>
+                        </div>
+                    </section> -->
+
+                <!-- Three -->
+                    <section class="wrapper style3 container special">
+
+                        <header class="major">
+                            <h2>Our Upcoming Events</h2>
+                        </header>
+
+                        {% assign sorted_events = (site.data.events | sort) %}
+                        {% for event in sorted_events limit:4 %}
+                        {% if forloop.index == 1 %}
+                        <div class="row">
+                        {% elsif forloop.index == 3 %}
+                        <div class="row">
+                        {% endif %}
+                            <div class="6u">
+                                <section>
+                                    <a href="/events/" class="image featured"><img src="/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
+                                    <header>
+                                        <h3><strong>{{event[1].name}}</strong></h3>
+                                        <p>{{event[1].date}} | <a href="{{event[1].locationlink}}">{{event[1].location}}</a></p>
+                                    </header>
+                                    <p>{{event[1].short-desc}}</p>
+                                    <footer>
+                                      <p>For more information, please <a href="{{event[1].website}}">visit the event's website</a>.</p>
+                                    </footer>
+                                </section>
+                            </div>
+                        {% if forloop.index == 2 %}
+                        </div>
+                        {% elsif forloop.index == 4 %}
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+
+                        <footer class="major">
+                            <ul class="buttons">
+                                <li><a href="/events/" class="button">More Events</a></li>
+                            </ul>
+                        </footer>
+
+                    </section>
+
+            </article>
+
+        <!-- CTA -->
+            <section id="cta">
+                <header>
+                    <h2>View Our Gallery</h2>
+                </header>
+                {% for gallery in page.galleries %}
+                <div class="gallery-wrapper">
+                    <a href="{{ gallery['gallery'] }}">
+                        <img class="gallery-best-image" src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}">
+                    </a>
+                    <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
+                    {{ gallery["images"] | size }} image{% if gallery["images"].size != 1 %}s{% endif %}
+                </div>
+                {% endfor %}
+                <footer>
+                    <ul class="buttons">
+                        <li><a href="/gallery/" class="button">More Images</a></li>
+                    </ul>
+                </footer>
+
+            </section>

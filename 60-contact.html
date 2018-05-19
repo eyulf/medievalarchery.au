@@ -1,0 +1,47 @@
+---
+layout: infobar
+id: contact
+title: Contact MAS
+permalink: /contact/
+---
+    <article id="main">
+        <header class="special container">
+            <span class="icon fa-envelope"></span>
+            <h2>Contact Us</h2>
+            <p>For all enquires please send us an email or fill in the form below and we will message you back shortly.</p>
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 special container small">
+
+            <!-- Content -->
+            <div class="content">
+                <form name="contact" method="POST" action="https://formspree.io/{{ site.contact }}">
+                    <input type="hidden" name="_subject" value="MAS Website Contact" />
+                    <input type="hidden" name="_next" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}#form" />
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <div class="row half collapse-at-2">
+                        <div class="6u">
+                            <input type="text" name="name" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="row half collapse-at-2">
+                        <div class="6u">
+                        <input type="text" name="_replyto" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="row half">
+                        <div class="6u">
+                            <textarea name="message" placeholder="Message" rows="7"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="12u">
+                            <ul class="buttons">
+                                <li><input type="submit" class="special" value="Send Message" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>

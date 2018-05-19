@@ -1,0 +1,44 @@
+---
+layout: infobar
+id: events
+title: Events MAS are attending
+permalink: /events/
+---
+
+    <article id="main">
+        <header class="special container">
+            <span class="icon fa-envelope"></span>
+            <h2>Events MAS Are Attending</h2>
+            <p>You will be able to find MAS at the following public events.</p>
+        </header>
+
+        <section class="wrapper style4 special container small">
+            <div class="content">
+            {% assign sorted_events = (site.data.events | sort) %}
+            {% for event in sorted_events%}
+                {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod !=0 %}
+                <div class="row">
+                {% endif %}
+                    <div class="6u">
+                        <section>
+                            <a href="/events/" class="image featured"><img src="/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
+                            <header>
+                                <h3><strong>{{event[1].name}}</strong></h3>
+                                <p>Date: {{event[1].date}}
+                                <br />
+                                Location: <a href="{{event[1].locationlink}}">{{event[1].location}}</a></p>
+                            </header>
+                            <p>{{event[1].short-desc}}</p>
+                            <footer>
+                                <p>For more information, please <a href="{{event[1].website}}">visit the event's website</a>.</p>
+                            </footer>
+                        </section>
+                    </div>
+                {% if mod == 0 %}
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </section>
+    </article>
