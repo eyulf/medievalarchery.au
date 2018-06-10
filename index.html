@@ -5,6 +5,8 @@ permalink: /
 ---
     <!-- Main -->
         <article id="main">
+
+            <!-- About -->
             <header class="special container">
                 <h2><strong>Medieval Archery Society</strong> (MAS)</h2>
 
@@ -16,67 +18,63 @@ permalink: /
                 </p>
             </header>
 
-                    <section class="wrapper style3 container special">
+            <!-- Events -->
+            <section class="wrapper style3 container special">
 
-                        <header class="major">
-                            <h2>Our Upcoming Events</h2>
-                        </header>
+                <header class="major">
+                    <h2>Our Upcoming Events</h2>
+                </header>
 
-                        {% assign sorted_events = (site.data.events | sort) %}
-                        {% for event in sorted_events limit:4 %}
-                        {% if forloop.index == 1 %}
-                        <div class="row">
-                        {% elsif forloop.index == 3 %}
-                        <div class="row">
-                        {% endif %}
-                            <div class="6u">
-                                <section>
-                                    <a href="/events/" class="image featured"><img src="/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
-                                    <header>
-                                        <h3><strong>{{event[1].name}}</strong></h3>
-                                        <p>{{event[1].date}} | <a href="{{event[1].locationlink}}">{{event[1].location}}</a></p>
-                                    </header>
-                                    <p>{{event[1].short-desc}}</p>
-                                    <footer>
-                                      <p>For more information, please <a href="{{event[1].website}}">visit the event's website</a>.</p>
-                                    </footer>
-                                </section>
-                            </div>
-                        {% if forloop.index == 2 %}
-                        </div>
-                        {% elsif forloop.index == 4 %}
-                        </div>
-                        {% endif %}
-                        {% endfor %}
+                {% assign sorted_events = (site.data.events | sort) %}
+                {% for event in sorted_events limit:4 %}
+                {% if forloop.index == 1 %}
+                <div class="row">
+                {% elsif forloop.index == 3 %}
+                <div class="row">
+                {% endif %}
+                    <div class="6u">
+                        <section>
+                            <a href="/events/" class="image featured"><img src="/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
+                            <header>
+                                <h3><strong>{{event[1].name}}</strong></h3>
+                                <p>{{event[1].date}} | <a href="{{event[1].locationlink}}" target="_blank">{{event[1].location}}</a></p>
+                            </header>
+                            <p>{{event[1].short-desc}}</p>
+                            <footer>
+                                <p>For more information, please <a href="{{event[1].website}}" target="_blank">visit the event's website</a>.</p>
+                            </footer>
+                        </section>
+                    </div>
+                {% if forloop.index == 2 %}
+                </div>
+                {% elsif forloop.index == 4 %}
+                </div>
+                {% endif %}
+                {% endfor %}
 
-                        <footer class="major">
-                            <ul class="buttons">
-                                <li><a href="/events/" class="button">More Events</a></li>
-                            </ul>
-                        </footer>
+                <footer class="major">
+                    <ul class="buttons">
+                        <li><a href="/events/" class="button">More Events</a></li>
+                    </ul>
+                </footer>
 
-                    </section>
+            </section>
 
-            </article>
+        </article>
+
+        <section id="pre-cta">
+        </section>
 
         <!-- CTA -->
-            <section id="cta">
+        <section id="cta">
+            <div class="inner">
                 <header>
-                    <h2>View Our Gallery</h2>
+                    <strong><h2>View Our Gallery</h2></strong>
                 </header>
-                {% for gallery in page.galleries %}
-                <div class="gallery-wrapper">
-                    <a href="{{ gallery['gallery'] }}">
-                        <img class="gallery-best-image" src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}">
-                    </a>
-                    <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
-                    {{ gallery["images"] | size }} image{% if gallery["images"].size != 1 %}s{% endif %}
-                </div>
-                {% endfor %}
                 <footer>
                     <ul class="buttons">
                         <li><a href="/gallery/" class="button">More Images</a></li>
                     </ul>
                 </footer>
-
-            </section>
+            </div>
+        </section>

@@ -4,10 +4,14 @@ id: contact
 title: Contact MAS
 permalink: /contact/
 ---
+{% assign facebook = site.data.links.social.links.facebook %}
+{% assign instagram = site.data.links.social.links.instagram %}
+{% assign museum = site.data.links.other.links.museum %}
+
     <article id="main">
         <header class="special container">
             <h2>Contact Us</h2>
-            <p>For all enquires please send us an email or fill in the form below and we will message you back shortly.</p>
+            <p>For all enquires please fill in the form below and we will message you back shortly.</p>
         </header>
 
         <!-- One -->
@@ -19,21 +23,64 @@ permalink: /contact/
                     <input type="hidden" name="_subject" value="MAS Website Contact" />
                     <input type="hidden" name="_next" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}#form" />
                     <input type="text" name="_gotcha" style="display:none" />
-                    <div class="row half collapse-at-2">
-                        <div class="6u">
-                            <input type="text" name="name" placeholder="Name" />
+
+                    <div class="contactform">
+                        <div class="row half">
+                            <div class="12u">
+                                <input type="text" name="name" placeholder="Name" />
+                            </div>
+                        </div>
+                        <div class="row half">
+                            <div class="12u">
+                            <input type="text" name="_replyto" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div class="row half">
+                            <div class="12u">
+                                <textarea name="message" placeholder="Message" rows="7"></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="row half collapse-at-2">
-                        <div class="6u">
-                        <input type="text" name="_replyto" placeholder="Email" />
+
+                    <div class="contactformicons">
+                        <div class="row">
+                            <div class="2u">
+                                <a href="{{ museum.url }}">
+                                    <span class="icon circle fa-map-marker"></span>
+                                </a>
+                            </div>
+                            <div class="10u">
+                               <a href="{{ museum.url }}">
+                                    <p>Campbelltown Steam &  Machinery Museum, 86 Menangle Rd, Menangle, New South Wales 2563</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                             <div class="2u">
+                                <a href="{{ facebook.url }}">
+                                    <span class="icon circle fa-facebook"></span>
+                                </a>
+                            </div>
+                            <div class="10u">
+                                <a href="{{ facebook.url }}">
+                                    <p>/medievalarcherysociety</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="2u">
+                                <a href="{{ instagram.url }}">
+                                    <span class="icon circle fa-instagram"></span>
+                                </a>
+                            </div>
+                            <div class="10u">
+                                <a href="{{ instagram.url }}">
+                                    <p>/medievalarcherysociety</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="row half">
-                        <div class="6u">
-                            <textarea name="message" placeholder="Message" rows="7"></textarea>
-                        </div>
-                    </div>
+
                     <div class="row">
                         <div class="12u">
                             <ul class="buttons">

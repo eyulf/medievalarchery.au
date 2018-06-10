@@ -17,7 +17,7 @@ permalink: /links/
                 <h3>{{ category[1]['name'] }}</h3>
                 <ul>
                 {% for link in category[1]['links'] %}
-                    <li><a href="{{ link[1].url }}">{{ link[1].name }}</a></li>
+                    <li><a href="{{ link[1].url }}" target="_blank">{{ link[1].name }}</a></li>
                 {% endfor %}
                 </ul>
                 {% endfor %}
