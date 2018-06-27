@@ -4,20 +4,21 @@ id: gallery-page
 ---
     <article id="main">
         <header class="special container">
-            <h2><a href="/{{ site.gallery.dir }}">{{ page.title }}</h2>
-            <p>{{ page.info.desc }}</p>
+            <h2><a href="/{{ site.gallery.dir }}/">{{ page.title }}</h2>
         </header>
 
-        <section class="wrapper style4 special container">
+        <section class="wrapper style4 special container" data-featherlight-gallery>
             <div class="content">
             {% for image in page.images %}
                 <div class="gallery-image-wrapper">
-                    <a name="{{ image.name }}"></a>
-                    <a href="{{ image.name }}"{% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]"{% endif %}>
+                    <a href="{{ image.name }}">
                         <img class="gallery-image" src="thumbs/{{ image.name }}" />
                     </a>
                 </div>
             {% endfor %}
             </div>
+            <ul class="buttons">
+                <li><a href="/{{ site.gallery.dir }}/" class="button">Back to Gallery</a></li>
+            </ul>
         </section>
     </article>

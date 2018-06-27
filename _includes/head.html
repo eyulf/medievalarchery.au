@@ -5,6 +5,17 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="" />
+
+    <noscript>
+        <link rel="stylesheet" href="/css/skel.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style-wide.css" />
+        <link rel="stylesheet" href="/css/style-noscript.css" />
+        {% if page.title contains '!Gallery' %}<link rel="stylesheet" href="/css/featherlight.min.css" />{% endif %}
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
@@ -13,14 +24,14 @@
     <script src="/js/skel.min.js"></script>
     <script src="/js/skel-layers.min.js"></script>
     <script src="/js/init.js"></script>
+    {% if page.id == 'home' %}<script src="/js/landing-page.js"></script>{% endif %}
+    {% if page.title contains '!Gallery' %}<script src="/js/featherlight.min.js"></script>
+
+    <script src="/js/featherlight.gallery.min.js"></script>
     <noscript>
-        <link rel="stylesheet" href="/css/skel.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/style-wide.css" />
-        <link rel="stylesheet" href="/css/style-noscript.css" />
-    </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+        <link rel="stylesheet" href="/css/featherlight.gallery.min.css" />
+    </noscript>{% endif %}
+
     <meta name="viewport" content="width=device-width">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

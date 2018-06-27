@@ -27,7 +27,7 @@ gallery:
   lightbox: true
   symlink: false
   title: "Gallery"
-  title_prefix: ""
+  title_prefix: "Gallery - "
   sort_field: "date_time"
   thumbnail_size:
     x: 200
