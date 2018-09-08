@@ -7,15 +7,17 @@ id: gallery-page
             <h2><a href="/{{ site.gallery.dir }}/">{{ page.title }}</h2>
         </header>
 
-        <section class="wrapper style4 special container" data-featherlight-gallery>
+        <section class="wrapper style4 special container">
             <div class="content">
+            <section data-featherlight-gallery data-featherlight-filter="a">
             {% for image in page.images %}
                 <div class="gallery-image-wrapper">
-                    <a href="{{ image.name }}">
+                    <a class="gallery-thumbnail" href="{{ image.name }}">
                         <img class="gallery-image" src="thumbs/{{ image.name }}" />
                     </a>
                 </div>
             {% endfor %}
+            </section>
             </div>
             <ul class="buttons">
                 <li><a href="/{{ site.gallery.dir }}/" class="button">Back to Gallery</a></li>

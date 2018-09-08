@@ -159,18 +159,6 @@
         padding-bottom: 0;
     }
 
-/* CTA */
-
-    #cta {
-        background-size: cover;
-        padding: 3em 1.5em;
-    }
-
-    #cta .inner {
-        margin-left: 0px;
-        margin-right: 0px
-    }
-
 /* Footer */
 
     #footer {

@@ -218,7 +218,6 @@
     }
 
         .image:before {
-            background: url("images/overlay.png");
             content: '';
             height: 100%;
             left: 0;
@@ -809,7 +808,7 @@
     #banner {
         z-index: 1;
         background-attachment: fixed;
-        background-color: green;
+        background-color: white;
         background-image: url("/images/slider/group1.jpg");
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -841,7 +840,7 @@
 
             #banner .inner header {
                 display: inline-block;
-                margin: 0 0 2em 0;
+                margin: 0 0 2em 0;z
                 padding: 3px 0 3px 0;
                 font-family: 'OldEnglishFive', cursive;
             }
@@ -914,38 +913,37 @@
 /* CTA */
 
     #pre-cta {
-        padding: 2em;
-    }
-
-    /* Fix background scrolling issue in Chrome */
-    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-        #cta {
-            transform: translateZ(0);
-        }
+        padding: 1em;
     }
 
     #cta {
-        background-attachment: fixed;
-        background-color: green;
-        background-image: url("/images/banner.jpg");
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        background-size: cover;
         color: white;
-        padding: 10em;
+        padding: 18.5em 0 18.5em 0;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url("/images/banner1.jpg");
+        background-color: white;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        z-index: 1;
     }
 
-        #cta header {
-            margin-bottom: 2em;
-        }
+    #cta header {
+        margin-bottom: 2em;
+        z-index: 10;
+    }
 
     #cta .inner {
         background: rgba(255, 255, 255, 0.75);
         color: black;
         padding: 1.5em;
-        margin-left: 28%;
-        margin-right: 28%;
+        width: 20em;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 10;
     }
 
 /* Footer */
@@ -1185,8 +1183,6 @@
         max-width: 20em;
     }
 
-
-
     .logo {
         margin: auto;
         padding-bottom: 2em;
@@ -1235,16 +1231,13 @@
         padding: 1%;
         display: inline-block;
         text-align: left;
+        vertical-align: top;
     }
 
     .contactformicons a {
         border-bottom: 0px;
     }
 
-    .contactformicons.row.10u {
-        padding-top: 20px;
-    }
-
-    .contactformicons.row.2u {
-        padding-top: 20px;
+    .contactformicons .row + .row > * {
+        padding-top: 0px;
     }
