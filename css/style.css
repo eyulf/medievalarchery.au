@@ -66,7 +66,7 @@
 
     h1, h2, h3, h4, h5, h6 {
         color: inherit;
-        font-weight: 300;
+        font-weight: bold;
         line-height: 1.75em;
         margin-bottom: 1em;
         text-transform: uppercase;
@@ -809,7 +809,7 @@
         z-index: 1;
         background-attachment: fixed;
         background-color: white;
-        background-image: url("/images/slider/group1.jpg");
+        background-image: url("/images/slider/group3.jpg");
         background-position: bottom center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1212,6 +1212,7 @@
             margin-bottom: 0;
             text-align: center;
             vertical-align: middle;
+            font-weight: 300;
         }
         .logo img {
             vertical-align: middle;
