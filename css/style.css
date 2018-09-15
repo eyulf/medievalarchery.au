@@ -808,7 +808,6 @@
     #banner {
         z-index: 1;
         background-attachment: fixed;
-        background-color: white;
         background-image: url("/images/slider/group3.jpg");
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -840,7 +839,7 @@
 
             #banner .inner header {
                 display: inline-block;
-                margin: 0 0 2em 0;z
+                margin: 0 0 2em 0;
                 padding: 3px 0 3px 0;
                 font-family: 'OldEnglishFive', cursive;
             }
@@ -885,7 +884,12 @@
         background-position: top left, top right, bottom left, bottom right;
         background-repeat: no-repeat;
         background-size: 25em;
+
         */
+        background-image: url("/images/header.png");
+        background-attachment: local;
+        background-repeat: repeat-x;
+        background-position: top left;
         padding: 5em 0;
 
     }
@@ -923,7 +927,6 @@
         margin-left: auto;
         margin-right: auto;
         background-image: url("/images/banner1.jpg");
-        background-color: white;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center center;
@@ -949,11 +952,13 @@
 /* Footer */
 
     #footer {
-        /* background: #e8eef4; */
-        background-image: url("/images/parchment.jpg");
         color: black;
-        padding: 5em 5em 5em 5em;
+        padding: 4em 4em 4em 4em;
         text-align: center;
+        background-image: url("/images/footer.png");
+        background-attachment: local;
+        background-repeat: repeat-x;
+        background-position: bottom left;
     }
 
         #footer .copyright {
