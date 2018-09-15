@@ -798,6 +798,13 @@
     @-ms-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
     @keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
 
+    /* Fix background scrolling issue in Chrome */
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+        #banner {
+            transform: translateZ(0);
+        }
+    }
+
     #banner {
         z-index: 1;
         background-attachment: fixed;
@@ -805,7 +812,6 @@
         background-position: bottom center;
         background-repeat: no-repeat;
         background-size: cover;
-        -webkit-transform: translateZ(0);
         color: white;
         cursor: default;
         padding: 11% 0;
@@ -906,6 +912,13 @@
         padding: 1em;
     }
 
+    /* Fix background scrolling issue in Chrome */
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+        #cta {
+            transform: translateZ(0);
+        }
+    }
+
     #cta {
         color: white;
         padding: 18.5em 0 18.5em 0;
@@ -917,7 +930,6 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        -webkit-transform: translateZ(0);
         z-index: 1;
     }
 
