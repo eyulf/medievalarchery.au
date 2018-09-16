@@ -1,5 +1,6 @@
 social:
   name: Social Media
+  desc: Where to find MAS elsewhere on the Internet
   links:
     facebook:
       name: Facebook
@@ -11,7 +12,7 @@ social:
 groups:
   name: Other Groups
   links:
-    8cots:
+    cots:
       name: Company of the Staple
       url: http://companyofthestaple.org.au/
     aaf:
@@ -29,6 +30,7 @@ groups:
 
 vendors:
   name: Merchants we like
+  desc: Please do your own research before making any significant purchase
   links:
     esford:
       name: Esford
