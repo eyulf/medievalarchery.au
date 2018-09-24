@@ -818,8 +818,9 @@
         background-size: cover;
         color: white;
         cursor: default;
-        padding: 11% 0;
+        padding: 10% 0;
         text-align: center;
+        height: 100vh;
     }
 
         #banner .inner {
@@ -935,6 +936,7 @@
         background-position: center center;
         background-size: cover;
         z-index: 1;
+        height: 100vh;
     }
 
     #cta header {
