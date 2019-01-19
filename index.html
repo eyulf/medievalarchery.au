@@ -3,6 +3,7 @@ layout: landing-page
 id: home
 permalink: /
 ---
+{% capture now-unix %}{{ 'now' | date: '%s' }}{% endcapture %}
     <!-- Main -->
         <article id="main">
 
@@ -26,7 +27,17 @@ permalink: /
                 </header>
 
                 {% assign sorted_events = (site.data.events | sort) %}
-                {% for event in sorted_events limit:2 %}
+                {% assign event_count = 0 %}
+                {% for event in sorted_events %}
+                {% capture event-unix %}{{event[1].end-date | date: '%s' }}{% endcapture %}
+                {% if now-unix >= event-unix %}
+                {% continue %}
+                {% elsif event_count >= 2 %}
+                {% continue %}
+                {% else %}
+                {% assign event_count = event_count | plus:1 %}
+                {% endif %}
+
                 {% if forloop.index == 1 %}
                 <div class="row">
                 {% elsif forloop.index == 3 %}
@@ -40,9 +51,11 @@ permalink: /
                                 <p>{{event[1].date}} | <a href="{{event[1].locationlink}}" target="_blank">{{event[1].location}}</a></p>
                             </header>
                             <p>{{event[1].short-desc}}</p>
+                            {% if {{event[1].website}} %}
                             <footer>
                                 <p>For more information, please <a href="{{event[1].website}}" target="_blank">visit the event's website</a>.</p>
                             </footer>
+                            {% endif %}
                         </section>
                     </div>
                 {% if forloop.index == 2 %}
