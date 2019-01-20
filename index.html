@@ -1,14 +1,96 @@
 ---
-layout: sidebox
+layout: landing-page
+id: home
+permalink: /
 ---
+{% capture now-unix %}{{ 'now' | date: '%s' }}{% endcapture %}
+    <!-- Main -->
+        <article id="main">
 
-<p>
-    The Medieval Archery Society (MAS) is a group of like minded people who primarily portray an English mercenary company (Free Company) in France, circa 1365, based in Sydney, Australia. 
-</p>
-<p>
-    The main focus of the group is archery, but we have members who have skills in medieval cooking, leatherwork, spinning, black smithing, fletching and foot combat. The group is also interested in archery from other periods of history, and other cultures. The group attends medieval festivals, often running archery for the public.
-</p>
+            <!-- About -->
+            <header class="special container">
+                <h2><strong>Medieval Archery Society</strong> (MAS)</h2>
 
-<div id="image">
-    <p>{% image 800w archers.jpg alt="The Medieval Archery Society" %}</p>
-</div>
+                <p>The <strong>Medieval Archery Society</strong> (MAS) is a group of like minded people who primarily portray an English mercenary company (Free Company) in France, circa 1365, based in Sydney, Australia. The main focus of the group is archery, but we have members who have skills in medieval cooking, leatherwork, spinning, blacksmithing, fletching and foot combat. The group is also interested in archery from other periods of history, and other cultures. The group attends medieval festivals, often running archery for the public.</p>
+                <p>
+                    <ul class="buttons">
+                        <li><a href="/about/" class="button">Learn more About Us</a></li>
+                    </ul>
+                </p>
+            </header>
+
+            <!-- Events -->
+            <section class="wrapper style3 container special">
+
+                <header class="major">
+                    <h2>Our Upcoming Events</h2>
+                </header>
+
+                {% assign sorted_events = (site.data.events | sort) %}
+                {% assign event_count = 0 %}
+                {% for event in sorted_events %}
+                {% capture event-unix %}{{event[1].end-date | date: '%s' }}{% endcapture %}
+                {% if now-unix >= event-unix %}
+                {% continue %}
+                {% elsif event_count >= 2 %}
+                {% continue %}
+                {% else %}
+                {% assign event_count = event_count | plus:1 %}
+                {% endif %}
+
+                {% if forloop.index == 1 %}
+                <div class="row">
+                {% elsif forloop.index == 3 %}
+                <div class="row">
+                {% endif %}
+                    <div class="6u">
+                        <section>
+                            <a href="/events/" class="image featured"><img src="/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
+                            <header>
+                                <h3><strong>{{event[1].name}}</strong></h3>
+                                <p>{{event[1].date}} | <a href="{{event[1].locationlink}}" target="_blank">{{event[1].location}}</a></p>
+                            </header>
+                            <p>{{event[1].short-desc}}</p>
+                            {% if {{event[1].website}} %}
+                            <footer>
+                                <p>For more information, please <a href="{{event[1].website}}" target="_blank">visit the event's website</a>.</p>
+                            </footer>
+                            {% endif %}
+                        </section>
+                    </div>
+                {% if forloop.index == 2 %}
+                </div>
+                {% elsif forloop.index == 4 %}
+                </div>
+                {% endif %}
+                {% endfor %}
+
+                <footer class="major">
+                    <ul class="buttons">
+                        <li><a href="/events/" class="button">More Events</a></li>
+                    </ul>
+                </footer>
+
+            </section>
+
+        </article>
+
+        <section id="pre-cta">
+        </section>
+
+        <!-- CTA -->
+        <section id="cta">
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <div class="inner">
+                <header>
+                    <strong><h2>View Our Gallery</h2></strong>
+                </header>
+                <footer>
+                    <ul class="buttons">
+                        <li><a href="/gallery/" class="button">More Images</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </section>

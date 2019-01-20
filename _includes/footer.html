@@ -1,5 +1,21 @@
-<div id="footer">
-    <p>{% if page.title == 'Gallery' %}All photos contained on this page displaying a Rookwood Studios watermark is Copyrighted - <a href="http://www.rookwoodstudio.net/">Rookwood Studios</a> &copy; {{ site.time|date: "%Y" }}</br>{% endif %}
-    Unless otherwise specified, all information and Media contained within this website is Copyrighted - <a href="{{ site.baseurl }}/contact/">{{ site.title }}</a> &copy; {{ site.time|date: "%Y" }}</br>
-    We are a Not-for-Profit Organisation - <a href="https://www.facebook.com/groups/675317789211161">{% image footer fb-blue.png alt="Facebook" %}</a></p>
-</div>
+<!-- Footer -->
+
+<footer id="footer">
+
+    <ul class="logo-footer">
+      <li><img src="/images/raven.png" alt="MAS Raven Logo" /> Medieval Archery Society</li>
+    </ul>
+
+    <ul class="icons">
+        {% for social in site.data.links.social.links %}
+        <li><a href="{{ social[1]['url'] }}" class="icon circle fa-{{ social[0] }}"><span class="label">{{ social[1]['name'] }}</span></a></li>
+        {% endfor %}
+    </ul>
+
+    <ul class="copyright">
+        <li>&copy; {{ site.time|date: "%Y" }} <a href="{{ site.baseurl }}/contact/">{{ site.title }}</a></li>
+    </ul>
+
+</footer>
+
+{% include scripts.html %}

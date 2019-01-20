@@ -1,18 +1,25 @@
-<div id="header">
-    <h1>M<span class="mobile">edieval</span> A<span class="mobile">rchery</span> S<span class="mobile">ociety</span>{% if page.title %}<span class="subheading"> - {{ page.title }}</span>{% endif %}</h1>
-</div>
+<!-- Header -->
 
-<div id="nav">
-    <ul>
-        <li>
-            <a href="{{ site.baseurl }}/">About Us</a>
-        </li>
-    {% for page in site.pages %}
-    {% if page.nav %}
-        <li>
-            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.nav }}</a>
-        </li>
-    {% endif %}
-    {% endfor %}
-    </ul>
-</div>
+<header id="header">
+                <h1 id="logo-header"><img src="/images/raven.png" alt="MAS Raven Logo" /><a href="/"><span>Medieval Archery Society</span></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/events/">Events</a></li>
+                        <li class="submenu">
+                            <a href="/gallery/">Gallery</a>
+                            <ul>
+                                <li><a href="/gallery/general/">General MAS</a></li>
+                                <li><a href="/gallery/ironfest/">Ironfest</a></li>
+                                <li><a href="/gallery/winterfest/">Winterfest</a></li>
+                                <li><a href="/gallery/stives/">St Ives</a></li>
+                                <li><a href="/gallery/opendays/">Open Days</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/links/">Links</a></li>
+                        <li><a href="/join/">Join Us</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>

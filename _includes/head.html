@@ -1,20 +1,22 @@
+<!-- Head -->
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="" />
 
-    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="author" content="{{ site.title }}" />
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-    <meta name="keywords" content="{{ site.keywords }}" />
+    <link href="/css/skel.css" type="text/css" rel="stylesheet" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="/css/style-wide.css" type="text/css" rel="stylesheet" />
+    <link href="/css/style-noscript.css" type="text/css" rel="stylesheet" />
+    {% if page.title contains 'Gallery' %}<link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link href="/css/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />{% endif %}
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
-    {% if page.title == 'Gallery' %}
-    <link rel="stylesheet" href="/css/lightbox.css" />
-    <script type="text/javascript" async src="/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" async src="/js/lightbox.min.js"></script>
-    {% endif %}
-    <!--[if lte IE 8]>
-    <script type="text/javascript" async src="/js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>

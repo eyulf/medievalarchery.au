@@ -1,0 +1,27 @@
+---
+layout: infobar
+id: gallery-page
+---
+    <article id="main">
+        <header class="special container">
+            <h2><a href="/{{ site.gallery.dir }}/">{{ page.title }}</a></h2>
+            <p>Photos of MAS in action. You can also find more images on our <a href="{{ site.data.links.social.links['instagram'].url }}">{{ site.data.links.social.links['instagram'].name }}</a> page.</p>
+        </header>
+
+        <section class="wrapper style4 special container">
+            <div class="content">
+            <section data-featherlight-gallery data-featherlight-filter="a">
+            {% for image in page.images %}
+                <div class="gallery-image-wrapper">
+                    <a class="gallery-thumbnail" href="{{ image.name }}">
+                        <img class="gallery-image" src="thumbs/{{ image.name }}" />
+                    </a>
+                </div>
+            {% endfor %}
+            </section>
+            </div>
+            <ul class="buttons">
+                <li><a href="/{{ site.gallery.dir }}/" class="button">Back to Gallery</a></li>
+            </ul>
+        </section>
+    </article>

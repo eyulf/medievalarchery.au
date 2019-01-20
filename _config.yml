@@ -1,18 +1,21 @@
 # Site settings
 title: Medieval Archery Society
 email: admin@medievalarchery.org.au
-description: > 
+contact: medievalarcherysociety@gmail.com
+description: >
     The Medieval Archery Society is a group of like minded people who primarily portray an English mercenary company (Free Company) in France circa 1350 based in Sydney, Australia.
 keywords: >
     mas,medieval,archer,archery,society,re-enactment,reenactment,sydney,new,south,wales,australia,nsw
-baseurl: "" 
-url: "https://preview.medievalarchery.org.au" 
+baseurl: ""
+url: https://preview.medievalarchery.org.au
 
 # Build settings
 markdown: kramdown
+timezone: Australia/Sydney
 
-gems:
+plugins:
   - jekyll-minifier
+  - jekyll-gallery-generator
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -20,36 +23,27 @@ exclude:
 sass:
     sass_dir: _sass
 
-gallerytag:
-    source_dir: images/gallery
-    destination_dir: images/thumbs
-    thumb_width: 150
-    thumb_height: 150
-    columns: 0
-    custom_attribute_name: data-lightbox
-    
-image:
-  source: images/fullsize
-  output: images/resized
-  presets:
-    side:
-      attr:
-        width: 219
-        height: 360
-      width: 219
-      height: AUTO
-    800w:
-      attr:
-        width: 800
-        height: 356
-      width: 800
-      height: AUTO
-    footer:
-      attr:
-        width: 18
-        height: 18
-      width: 18
-      height: AUTO
-    default:
-      width: 800
-      height: AUTO
+gallery:
+  dir: gallery
+  lightbox: true
+  symlink: false
+  title: "Gallery"
+  title_prefix: "Gallery - "
+  sort_field: "date_time"
+  thumbnail_size:
+    x: 200
+    y: 200
+
+galleries:
+  winterfest:
+    name: Winterfest
+    info:
+      desc: Winterfest Medieval Fair
+  stives:
+    name: St Ives
+  ironfest:
+    name: Ironfest
+  opendays:
+    name: Open Days
+  general:
+    name: General
