@@ -29,14 +29,11 @@ build-jekyll:
     - apk update && apk add openssh-client bash rsync tzdata
     - cp /usr/share/zoneinfo/Australia/Sydney /etc/localtime
     - echo 'Australia/Sydney' > /etc/timezone
-    - date
   script:
     - eval $(ssh-agent -s)
     - bash -c  'ssh-add -q <(echo "${SSH_PRIVATE_KEY}"|tr -d "\r")'
     - mkdir -p ~/.ssh
     - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
-    - md5sum _site/index.html
-    - stat _site/index.html
     - rsync -hrvzci --delete _site/ "${SSH_WEBROOT_LOCATION}"
     - ssh ${SSH_POST_DEPLOY_SCRIPT}
   dependencies:
