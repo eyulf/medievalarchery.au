@@ -1,4 +1,4 @@
-image: ruby:2.4
+image: ruby:2.4/for
 
 stages:
   - build
@@ -29,6 +29,9 @@ build-jekyll:
     - jekyll
   before_script:
     - apk update && apk add openssh-client bash rsync
+    - echo 'Australia/Sydney' > /etc/timezone
+    - ls -la /etc/localtime
+    - dpkg-reconfigure -f noninteractive tzdata
   script:
     - eval $(ssh-agent -s)
     - bash -c  'ssh-add -q <(echo "${SSH_PRIVATE_KEY}"|tr -d "\r")'
@@ -36,7 +39,7 @@ build-jekyll:
     - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
     - md5sum _site/index.html
     - stat _site/index.html
-    - rsync -hrvzc --delete _site/ "${SSH_WEBROOT_LOCATION}"
+    - rsync -hrvzci --delete _site/ "${SSH_WEBROOT_LOCATION}"
     - ssh ${SSH_POST_DEPLOY_SCRIPT}
 
   dependencies:
