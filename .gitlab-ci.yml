@@ -1,4 +1,4 @@
-image: ruby:2.4/for
+image: ruby:2.4
 
 stages:
   - build
