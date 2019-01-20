@@ -11,6 +11,7 @@ url: https://preview.medievalarchery.org.au
 
 # Build settings
 markdown: kramdown
+timezone: Australia/Sydney
 
 plugins:
   - jekyll-minifier
