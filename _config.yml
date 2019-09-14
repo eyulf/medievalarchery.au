@@ -37,13 +37,21 @@ gallery:
 galleries:
   winterfest:
     name: Winterfest
-    info:
-      desc: Winterfest Medieval Fair
+    best_image: winterfest-2017-05.jpg
+    sort_reverse: true
   stives:
     name: St Ives
+    best_image: stives-2018-22.jpg
+    sort_reverse: true
   ironfest:
     name: Ironfest
+    best_image: 2355497_orig.jpg
+    sort_reverse: true
   opendays:
     name: Open Days
+    best_image: opendays-2017-05.jpg
+    sort_reverse: true
   general:
     name: General
+    best_image: winterfest-2017-05.jpg
+    sort_reverse: true
