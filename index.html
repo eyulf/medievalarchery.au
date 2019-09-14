@@ -26,6 +26,7 @@ permalink: /
                     <h2>Our Upcoming Events</h2>
                 </header>
 
+                <div class="row">
                 {% assign sorted_events = (site.data.events | sort) %}
                 {% assign event_count = 0 %}
                 {% for event in sorted_events %}
@@ -38,11 +39,6 @@ permalink: /
                 {% assign event_count = event_count | plus:1 %}
                 {% endif %}
 
-                {% if forloop.index == 1 %}
-                <div class="row">
-                {% elsif forloop.index == 3 %}
-                <div class="row">
-                {% endif %}
                     <div class="6u">
                         <section>
                             <a href="/events/" class="image featured"><img src="/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
@@ -58,12 +54,8 @@ permalink: /
                             {% endif %}
                         </section>
                     </div>
-                {% if forloop.index == 2 %}
-                </div>
-                {% elsif forloop.index == 4 %}
-                </div>
-                {% endif %}
                 {% endfor %}
+                </div>
 
                 <footer class="major">
                     <ul class="buttons">
