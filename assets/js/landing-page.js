@@ -15,3 +15,15 @@ $(document).ready(function() {
         }
     });
 });
+
+$(function() {
+    $('#banner, body').vegas({
+        timer: false,
+        delay: 10000,
+        slides: [
+            { src: '/assets/images/slider/group1.jpg' },
+            { src: '/assets/images/slider/group2.jpg' },
+            { src: '/assets/images/slider/group3.jpg' }
+        ]
+    });
+});

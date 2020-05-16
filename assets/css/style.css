@@ -1,4 +1,4 @@
-@import url("font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css");
 @import url("fonts-lato.css");
 
 @font-face {
@@ -16,7 +16,7 @@
 
     body, #skel-layers-wrapper {
         background: #f3f6fa;
-        background-image: url("/images/parchment.jpg");
+        background-image: url("/assets/images/parchment.jpg");
     }
 
     body.is-loading * {
@@ -507,7 +507,7 @@
 
         .wrapper.style2 {
             background-color: #83d3c9;
-            background-image: url("images/light-bl.svg"), url("images/light-br.svg");
+            background-image: url("/assets/images/light-bl.svg"), url("/assets/images/light-br.svg");
             background-position: bottom left, bottom right;
             background-repeat: no-repeat, no-repeat;
             background-size: 25em, 25em;
@@ -812,7 +812,7 @@
     #banner {
         z-index: 1;
         background-attachment: fixed;
-        background-image: url("/images/slider/group3.jpg");
+        /*background-image: url("/images/slider/group1.jpg");*/
         background-position: bottom center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -884,7 +884,7 @@
 /* Main */
 
     #main {
-        background-image: url("/images/header.png");
+        background-image: url("/assets/images/header.png");
         background-attachment: local;
         background-repeat: repeat-x;
         background-position: top left;
@@ -930,7 +930,7 @@
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        background-image: url("/images/banner1.jpg");
+        background-image: url("/assets/images/banner1.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center center;
@@ -960,7 +960,7 @@
         color: black;
         padding: 4em 4em 4em 4em;
         text-align: center;
-        background-image: url("/images/footer.png");
+        background-image: url("/assets/images/footer.png");
         background-attachment: local;
         background-repeat: repeat-x;
         background-position: bottom left;

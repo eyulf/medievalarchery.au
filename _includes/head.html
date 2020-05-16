@@ -6,15 +6,15 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="" />
 
-    <link href="/css/skel.css" type="text/css" rel="stylesheet" />
-    <link href="/css/style.css" type="text/css" rel="stylesheet" />
-    <link href="/css/style-wide.css" type="text/css" rel="stylesheet" />
-    <link href="/css/style-noscript.css" type="text/css" rel="stylesheet" />
-    {% if page.title contains 'Gallery' %}<link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
-    <link href="/css/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />{% endif %}
+    <link href="/assets/css/skel.css" type="text/css" rel="stylesheet" />
+    <link href="/assets/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="/assets/css/style-wide.css" type="text/css" rel="stylesheet" />
+    <link href="/assets/css/style-noscript.css" type="text/css" rel="stylesheet" />
+    {% if page.title contains 'Gallery' %}<link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />{% endif %}
 
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+    {% if page.id == 'home' %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    {% endif %}
 
     <meta name="viewport" content="width=device-width">
 

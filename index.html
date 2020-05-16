@@ -41,13 +41,13 @@ permalink: /
 
                     <div class="6u">
                         <section>
-                            <a href="/events/" class="image featured"><img src="/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
+                            <a href="/events/" class="image featured"><img src="/assets/images/events/{{event[1].image}}" alt="{{event[1].title}}" /></a>
                             <header>
                                 <h3><strong>{{event[1].name}}</strong></h3>
                                 <p>{{event[1].date}} | <a href="{{event[1].locationlink}}" target="_blank">{{event[1].location}}</a></p>
                             </header>
                             <p>{{event[1].short-desc}}</p>
-                            {% if {{event[1].website}} %}
+                            {% if event[1].website %}
                             <footer>
                                 <p>For more information, please <a href="{{event[1].website}}" target="_blank">visit the event's website</a>.</p>
                             </footer>
