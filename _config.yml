@@ -7,7 +7,7 @@ description: >
 keywords: >
     mas,medieval,archer,archery,society,re-enactment,reenactment,sydney,new,south,wales,australia,nsw
 baseurl: ""
-url: https://staging.medievalarchery.au
+url: https://medievalarchery.au
 
 # Build settings
 markdown: kramdown
