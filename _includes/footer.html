@@ -3,12 +3,12 @@
 <footer id="footer">
 
     <ul class="logo-footer">
-      <li><img src="/images/raven.png" alt="MAS Raven Logo" /> Medieval Archery Society</li>
+      <li><img src="/assets/images/raven.png" alt="MAS Raven Logo" /> Medieval Archery Society</li>
     </ul>
 
     <ul class="icons">
         {% for social in site.data.links.social.links %}
-        <li><a href="{{ social[1]['url'] }}" class="icon circle fa-{{ social[0] }}"><span class="label">{{ social[1]['name'] }}</span></a></li>
+        <li><a href="{{ social[1]['url'] }}" class="icon circle fab fa-{{ social[0] }}"><span class="label">{{ social[1]['name'] }}</span></a></li>
         {% endfor %}
     </ul>
 
