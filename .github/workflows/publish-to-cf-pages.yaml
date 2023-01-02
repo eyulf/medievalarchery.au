@@ -1,11 +1,12 @@
 name: Publish to Cloudflare Pages
 
 on:
-  workflow_dispatch:
   push:
     branches:
       main
       staging
+
+  workflow_dispatch:
 
 permissions:
   id-token: write
