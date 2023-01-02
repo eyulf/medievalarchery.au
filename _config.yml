@@ -1,13 +1,13 @@
 # Site settings
 title: Medieval Archery Society
-email: admin@medievalarchery.org.au
+email: medievalarcherysociety@gmail.com
 contact: medievalarcherysociety@gmail.com
 description: >
     The Medieval Archery Society is a group of like minded people who primarily portray an English mercenary company (Free Company) in France circa 1350 based in Sydney, Australia.
 keywords: >
     mas,medieval,archer,archery,society,re-enactment,reenactment,sydney,new,south,wales,australia,nsw
 baseurl: ""
-url: https://medievalarchery.org.au
+url: https://staging.medievalarchery.au
 
 # Build settings
 markdown: kramdown
